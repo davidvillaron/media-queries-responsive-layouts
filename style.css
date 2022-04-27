@@ -1,0 +1,123 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* for layout to be covering the whole screen */
+.layout-container {
+    width: 100vw;
+    height: 100vh;
+
+    /* grid properties */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 20px;
+
+}
+
+
+header {
+    /* cosmetics */
+    font-size: 3.5em;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*********************************/
+
+    
+    background: #FFDE59;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.box1 {
+    /* cosmetics */
+    font-size: 2.5em;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*********************************/
+
+    margin-bottom: -20px; /* <--to remove the gap between the boxes */
+    background: #C9E265;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+
+.box2 {
+    /* cosmetics */
+    font-size: 2.5em;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*********************************/
+
+
+    background: #FF66C4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+
+}
+
+.box3 {
+    /* cosmetics */
+    font-size: 2.5em;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*********************************/
+
+    background: #38B6FF;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    /* grid-row: 2/4;  <- this is the same as the above
+    grid-column: 3/4; */
+}
+
+footer {
+    /* cosmetics */
+    font-size: 3.5em;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*********************************/
+
+
+    background: #FFDE59;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+@media only screen and (max-width: 570px) {
+    .layout-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    header, footer {
+        height: 10%;
+        width: 100%;
+    }
+
+    .box1, .box2, .box3 {
+        height: 26.66%;
+        width: 100%;
+    }
+    .box3 {
+        margin-top: -20px; /* <--to remove the grid gap between the boxes */
+    }
+}
